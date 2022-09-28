@@ -1,8 +1,6 @@
 from dataclasses import fields
-import email
 from locale import currency
 from pyexpat import model
-from re import search
 from unittest.util import _MAX_LENGTH
 from urllib import request
 from wsgiref import validate

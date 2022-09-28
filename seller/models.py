@@ -1,12 +1,4 @@
-from distutils.command.upload import upload
-from itertools import product
-from lib2to3.pgen2.grammar import opmap
-from locale import currency
-from msilib.schema import Class
-from pydoc import ModuleScanner
-from re import M
 from time import time
-from turtle import title
 from django.db import models
 from Buyer.models import Customer
 

@@ -1,10 +1,4 @@
-import email
-from importlib.resources import contents
-from itertools import product
-from msilib.schema import Class
 from multiprocessing import context
-import re
-from turtle import title
 from urllib import request, response
 from django.shortcuts import render
 import json
@@ -13,7 +7,6 @@ from Buyer.models import Customer
 from .models import product_det,Category,Cart,tag_pro
 from seller import serializers
 from .serializers import productSerializers
-# api libs
 from rest_framework import status 
 from rest_framework.response import Response
 from seller import serializers
