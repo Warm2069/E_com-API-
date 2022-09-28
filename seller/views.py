@@ -1,7 +1,6 @@
 import email
 from importlib.resources import contents
 from itertools import product
-from msilib.schema import Class
 from multiprocessing import context
 import re
 from turtle import title
