@@ -1,4 +1,3 @@
-from re import M
 from time import time
 from django.db import models
 from Buyer.models import Customer
