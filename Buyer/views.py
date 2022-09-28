@@ -1,6 +1,5 @@
 import email
 from lib2to3.pgen2 import token
-from msilib.schema import Class
 from multiprocessing import context
 from tabnanny import check
 from django.shortcuts import render
