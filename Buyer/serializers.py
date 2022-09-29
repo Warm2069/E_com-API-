@@ -1,5 +1,7 @@
 from asyncore import write
 from dataclasses import fields
+import email
+
 from select import select
 from xml.dom import ValidationErr
 from xml.parsers.expat import model
