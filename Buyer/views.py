@@ -74,7 +74,7 @@ class CustomerRegistration(generics.CreateAPIView):
    serializer_class=serializers.CustomerRegistrationSerializer
 
 class CustomerLoginView(GenericAPIView):
-    serializer_class=serializers.CustomerloginSerializer
+   serializer_class=serializers.CustomerloginSerializer
    def post(self,request,format=None):
       serializer=serializers.CustomerloginSerializer(data=request.data)
       if serializer.is_valid(raise_exception=True):
