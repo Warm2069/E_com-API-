@@ -13,6 +13,7 @@ from seller import serializers
 from rest_framework.decorators import APIView,api_view
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.generics import GenericAPIView
 # Create your views here.
 
 # @api_view(['GET','POST'])
@@ -86,7 +87,7 @@ class view_all_product(APIView):
             return Response({'mag':'me be you are not registered or your not seller profile'},status=status.HTTP_404_NOT_FOUND)
         return Response({'msg':"you'r not registerd user"},status=status.HTTP_400_BAD_REQUEST)
 
-class search_product(APIView):
+class search_product(GenericAPIView):
     permission_classes=[IsAuthenticated]
     def get(self,request,qu,format=None):
         chk_Search_id=Customer.objects.filter(email=request.user)

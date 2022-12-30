@@ -1,9 +1,6 @@
 from asyncore import write
 from dataclasses import fields
-<<<<<<< HEAD
 import email
-=======
->>>>>>> 2120bbf (second commit)
 from select import select
 from xml.dom import ValidationErr
 from xml.parsers.expat import model

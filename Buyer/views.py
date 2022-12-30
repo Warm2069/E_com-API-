@@ -1,4 +1,5 @@
 from multiprocessing import context
+from typing import Generic
 from .models import Customer
 from django.contrib.auth import authenticate
 import pyotp
@@ -12,6 +13,7 @@ from Buyer import serializers
 from rest_framework.decorators import APIView,api_view
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.generics import GenericAPIView # IMP Class for api in swagger 
 
 #import token
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -72,7 +74,8 @@ class CustomerRegistration(generics.CreateAPIView):
    queryset=Customer
    serializer_class=serializers.CustomerRegistrationSerializer
 
-class CustomerLoginView(APIView):
+class CustomerLoginView(GenericAPIView):
+   serializer_class=serializers.CustomerloginSerializer
    def post(self,request,format=None):
       serializer=serializers.CustomerloginSerializer(data=request.data)
       if serializer.is_valid(raise_exception=True):

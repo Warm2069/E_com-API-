@@ -23,7 +23,8 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+   #  path('',schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'), 
+    path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'), 
     path('product/view',seller.view_all_product.as_view()),
     path('product/add',seller.Add_product.as_view()),
     path('account/add',buy.CustomerRegistration.as_view()),
@@ -44,3 +45,6 @@ urlpatterns = [
 ]
 
 urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+
