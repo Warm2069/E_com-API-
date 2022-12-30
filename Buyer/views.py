@@ -13,7 +13,11 @@ from Buyer import serializers
 from rest_framework.decorators import APIView,api_view
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
+<<<<<<< HEAD
 from rest_framework.generics import GenericAPIView # IMP Class for api in swagger 
+=======
+from rest_framework.generics import GenericAPIView
+>>>>>>> 802b8d0c4cf887019554225590756d3d0d7c4a92
 
 #import token
 from rest_framework_simplejwt.tokens import RefreshToken
