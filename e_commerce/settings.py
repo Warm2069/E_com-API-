@@ -166,15 +166,14 @@ REST_FRAMEWORK = {
     )
 }
 
-<<<<<<< HEAD
+
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
-=======
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 PROTOCOL = 'https'
->>>>>>> 802b8d0c4cf887019554225590756d3d0d7c4a92
+
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
